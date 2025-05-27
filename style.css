@@ -1,0 +1,190 @@
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+   
+
+}
+body{
+     background: linear-gradient(to right, #fff, #83e0fe);
+}
+
+.container{
+   margin: 20px;
+   border: 1px solid black;
+   border-radius: 20px;
+   background: #005AA7;  
+   background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  
+   background: linear-gradient(to right, #FFFDE4, #005AA7); 
+   width: 97vw;
+   height: 93vh;
+}
+/* ---------------------------------------------  BOX1  -------------------------------------------------------| */
+
+.box1 {
+    border: 2px solid black ;
+    margin: 10px;
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgba(38, 176, 214, 0.966);
+   
+/* ----------------------------------------------------------------------------------------------------| */
+  position: relative; /* Position must be realtive to move Animations */
+
+  /* shorthand for animation : (values) 👇👇
+animation:      [name]    [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state];*/
+animation:  rightmovement     5s           linear         1s       infinite       alternate    none      running;
+}
+
+ @keyframes rightmovement {   /* Animation name */
+    from {
+        left: 0;      /* From = source; */
+        top: 10px;
+    }
+
+    to {
+        left: 1200px;    /* From = Destination ;*/
+        top: 10px;
+    }
+}
+
+/* --------------------------------------------- Circle -------------------------------------------------------| */
+
+
+#circle{
+    background: #43cea2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 2px solid black ;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: absolute;
+    top: 27%;
+    left: 43%;
+    animation: circle1 10s  linear  1s  infinite alternate running;
+}
+
+
+    @keyframes circle1 {   /* Animation name */
+    0%{
+        top:71%; /* Top ko badane par nichee jaega ball */
+        left:83%; /* left ko badaya to right me jaeega  */
+        
+    }
+    25%{
+     top:11%; /* Top ko kam karne par upar jaega ball */
+     left:49%;   /* left ko kam kiya to left me jaeega  */
+    }
+
+    50%{
+        top: 71%; /* Top ko badane par nichee jaega ball */
+        left:5%  /* left ko kam kiya to left me jaeega  */
+    }
+
+    100%{
+       top: 11%; /* Top ko kam karne par upar jaega ball */
+       left: 10% ;  /* left ko kam kiya to left me jaeega  */
+    }
+
+}
+
+/*-------------------- {[ Most Important about how to Use "top" and "left"👇👇]}-----------------------------------| 
+1.) Top 👉👉   Top zyada → element niche jaayega.
+                Top kam   → element upar jaayega.
+
+2.) Left👉👉   left zyada → element right jaayega.
+                left kam   → element left jaayega.
+
+*/
+
+/* ---------------------------------------------  BOX2  -------------------------------------------------------| */
+
+
+#box2{
+
+    border: 2px solid black ;
+    margin: 10px;
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgba(38, 176, 214, 0.966);
+   
+/* ----------------------------------------------------------------------------------------------------| */
+  position: absolute; /* Position must be realtive to move Animations */
+
+  /* shorthand for animation : (values) 👇👇
+animation:      [name]    [duration] [timing-function] [delay] [iteration-count]     [direction]    [fill-mode] [play-state];*/
+animation:   leftmovement    5s          ease-in         1s        infinite        alternate              running;
+
+
+}
+
+
+ @keyframes leftmovement {   /* Animation name */
+    from {
+        top: 590px;
+        left: 1200px;      /* From = source; */
+        
+    }
+
+    to {
+        top: 590px;
+        left: 0;    /* From = Destination ;*/
+        
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------| */
+
+
+
+/* 👇👇👇👇👇👇👇👇-----------IMPORTANT THINGS ALL DOWN---------------👇👇👇👇👇👇👇👇 */
+
+
+/*animation-name: rightmovement;  ( Animation name comes from @keyframes below 👇👇 )*/
+ /* animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-direction: alternate; */
+ /* animation-play-state: running; 
+    animation-fill-mode: forwards; */
+
+    
+/* -------------------🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉------------------------------| */
+
+
+/*                    Specify the Speed Curve of the Animation
+    ["The animation-timing-function" property specifies the speed curve of the animation.]
+                                         👇👇👇👇👇👇👇
+    -----------------------------------------------------------------------------------------------------|
+             The animation-timing-function property can have the following values:
+    -----------------------------------------------------------------------------------------------------|
+    
+    1️⃣ease - Specifies an animation with a slow start, then fast, then end slowly. (This is default)
+    2️⃣linear - Specifies an animation with the same speed from start to end.
+    3️⃣ease-in - Specifies an animation with a slow start.
+    4️⃣ease-out - Specifies an animation with a slow end.
+    5️⃣ease-in-out - Specifies an animation with a slow start and end.
+    6️⃣cubic-bezier(n,n,n,n) - Lets you define your own values in a cubic-bezier function.
+    -----------------------------------------------------------------------------------------------------|
+    The following example shows some of the different speed curves that can be used: */
+
+    /* example :- animation-timing-function: linear; */
+
+/* <-----------------------🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉🌉-------------------------->*/
+
+   
+     /*                                   
+<---------------------------------------------------------------------------------------------------------|
+                                             (cubic-beizer)
+                                                 👇👇👇
+
+       👉 Use case :- 
+       👉 cubic-bezier animation ka speed control system hota hai — 
+       👉 yaani animation kitni tezi se start ho, mid mein kaise chale aur end kaise ho — ye sab decide karta hai.
+
+
+       --> ( https://cubic-bezier.com/#.17,.67,.83,.67 )-(👈👈 tool for "cubic-beizer" )
